@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:media="http://search.yahoo.com/mrss/">
+	<channel>
+		<title>Titolo</title>
+		<link>https://violabnb.com</link>
+		<description>descrizione</description>
+		<pubDate>Thu, 23 Nov 2023 10:54:39 GMT</pubDate>
+		<ttl>60</ttl>
+		<generator>Talesign RSS</generator>
+		<atom:link href="https://violabnb.com/legal.xml" rel="self" type="application/rss+xml"/>
+		
+        <item>
+            <title>Cookie Policy - Violabnb.com</title>
+			<link>https://violabnb.com/legal/cookie</link>
+			<guid>https://violabnb.com/legal/cookie</guid>
+			<description>Scopri la nostra informativa sull'utilizzo dei cookie.</description>
+			<pubDate>Thu, 16 Nov 2023 10:29:14 GMT</pubDate>
+			<media:content url="https://vrcms.talesign.com/api/files/legal/2730z7lzxs57v9x/undefined" medium="image"/>
+			<media:thumbnail url="https://vrcms.talesign.com/api/files/legal/2730z7lzxs57v9x/undefined"/>
+            </item><item>
+            <title>Privacy Policy - Violabnb.com</title>
+			<link>https://violabnb.com/legal/privacy</link>
+			<guid>https://violabnb.com/legal/privacy</guid>
+			<description>Scopri la nostra informativa sulla privacy.</description>
+			<pubDate>Thu, 16 Nov 2023 10:29:23 GMT</pubDate>
+			<media:content url="https://vrcms.talesign.com/api/files/legal/73mgfie1l45xvud/undefined" medium="image"/>
+			<media:thumbnail url="https://vrcms.talesign.com/api/files/legal/73mgfie1l45xvud/undefined"/>
+            </item>
+    </channel>
+</rss>

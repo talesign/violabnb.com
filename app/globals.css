@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+COOKEIS
+*/
+
+.cookies {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+.cookies-primary-button {
+  @apply font-bold block w-full py-2 px-8 bg-full-100 rounded-lg text-sm text-center;
+}
+.cookies-secondary-button {
+  @apply font-bold block w-full py-2 px-8 bg-pastel-red rounded-lg text-sm text-center;
+}
+.cookies-preferences-button {
+  @apply p-1;
+}
+.cookies-preferences-toggle-off {
+  @apply peer-focus:ring-full-100 peer-checked:bg-full-100 dark:peer-focus:ring-full-100 dark:bg-gray-900 peer-checked:after:border-white after:bg-white dark:border-gray-600;
+}
+.cookies-preferences-toggle {
+  @apply peer-checked:bg-full-100 peer-focus:ring-full-100 dark:peer-focus:ring-full-100 dark:bg-gray-900 peer-checked:after:border-white after:bg-white dark:border-gray-600;
+}
+
+/* 
+BASIC 
+*/
+.container {
+  @apply xl:max-w-[1680px] mx-auto p-6;
+}
+.link {
+  @apply underline;
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #919191 #f8f8f8;
+}
+
+/* Chrome, Edge, and Safari */
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #919191;
+  border-radius: 10px;
+  border: 0px none #ffffff;
+}
+
+.scrollbar-2 {
+  scrollbar-width: thin;
+  scrollbar-color: #c3c3c3;
+}
+
+/* Chrome, Edge, and Safari */
+.scrollbar-2::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-2::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.scrollbar-2::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3;
+  border-radius: 10px;
+  border: 0px none #ffffff;
+}
+/*
+GOOGLE RECAPTCHA
+*/
+
+.gtm-iframe {
+  display: none;
+  visibility: hidden;
+}
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+/* 
+FONTS 
+*/
+
+@font-face {
+  font-family: "Manrope";
+  font-weight: 400;
+  src: url("../public/fonts/Manrope-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  font-weight: 700;
+  src: url("../public/fonts/Manrope-Bold.ttf");
+  font-display: swap;
+}
+
+/* 
+BASE HTML
+*/
+
+html {
+  font-family: Manrope;
+  overflow-x: hidden;
+  @apply text-grayscale-950;
+}
+h1 {
+  @apply xl:text-6xl text-4xl font-bold tracking-tighter;
+}
+h2 {
+  @apply xl:text-4xl text-2xl font-bold tracking-tight;
+}
+h3 {
+  @apply xl:text-2xl text-xl font-bold;
+}
+h4 {
+  @apply xl:text-xl font-bold tracking-tight;
+}
+h5 {
+  @apply text-sm uppercase font-bold tracking-tight;
+}
+h6 {
+  @apply text-sm uppercase font-bold tracking-tight;
+}
+p {
+  @apply text-base;
+}
+ul {
+  @apply list-decimal list-inside leading-relaxed;
+}
+ol {
+  @apply list-disc list-inside leading-relaxed;
+}
+
+/*
+BODYCOPY
+*/
+
+.bodycopy p {
+  @apply leading-relaxed my-2;
+}
+.bodycopy h2 {
+  @apply leading-relaxed mt-8 text-2xl;
+}
+.bodycopy h3 {
+  @apply leading-relaxed mt-6 text-xl;
+}

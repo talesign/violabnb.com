@@ -1,0 +1,202 @@
+"use server";
+
+import { transporter, mailOptions } from "@/lib/defaults/form/formTransporter";
+
+const generateEmailContent = (data: any, location: any, title: any) => {
+  const stringData = Object.entries(data).reduce(
+    (str, [key, val]) => (str += `${key}: \n${val} \n \n`),
+    ""
+  );
+  const htmlData = Object.entries(data).reduce((str, [key, val]) => {
+    return (str += `<h3 class="form-heading" align="left">${key}</h3><p class="form-answer" align="left">${val}</p>`);
+  }, "");
+
+  return {
+    text: stringData,
+    html: `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>Nuova richiesta</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <style type="text/css">
+          @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+          body,
+          table,
+          td,
+          a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+          }
+          table {
+            border-collapse: collapse !important;
+          }
+          body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+          }
+          @media screen and (max-width: 525px) {
+            .wrapper {
+              width: 100% !important;
+              max-width: 100% !important;
+            }
+            .responsive-table {
+              width: 100% !important;
+            }
+          }
+          .form-container {
+            margin-bottom: 24px;
+            padding: 20px;
+
+            border: 1px dashed #ccc;
+          }
+          #form-data {
+            padding-top: 40px;
+          }
+          .form-heading {
+            color: #39393a;
+            font-weight: 700;
+            text-align: left;
+            line-height: 20px;
+            font-size: 18px;
+            margin: 0 0 0px;
+            padding-bottom: 10px;
+          }
+          .form-answer {
+            color: #39393a;
+            font-weight: 400;
+            text-align: left;
+            line-height: 20px;
+            font-size: 16px;
+            margin: 0 0 20px;
+            padding: 0;
+          }
+          div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+          }
+        </style>
+      </head>
+      <body
+        style="
+          margin: 0 !important;
+          padding: 0 !important;
+          background: #f5f5f5;
+          font-family: 'Roboto', 'Helvetica', sans-serif;
+          padding-bottom: 400px;
+        "
+      >
+        <table
+          cellpadding="0"
+          cellspacing="0"
+          style="padding-bottom: 400px; width: 100%"
+        >
+          <tr>
+            <td class="section-padding">
+              <table
+                width="100%"
+                style="max-width: 525px; margin: 0px auto"
+                class="responsive-table"
+              >
+                <tr>
+                  <td>
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>
+                          <table width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td
+                                style="
+                                  padding: 0 0 0 0;
+                                  font-size: 16px;
+                                  line-height: 25px;
+                                  color: #39393a;
+                                  background: #fff;
+                                  padding: 32px;
+                                  border-top: solid 3px #ef3054;
+                                "
+                                class="padding message-content"
+                              >
+                                <a href="https://talesign.com">
+                                  <img
+                                    style="
+                                      width: 100px;
+                                      padding-bottom: 20px;
+                                      padding-top: 20px;
+                                      margin: auto !important;
+                                    "
+                                    src="https://drive.google.com/uc?export=view&id=1lNmMlKqVLwWiA4qszkqw8zuOlv72gvPf"
+                                  />
+                                </a>
+
+                                <h2 style="padding-bottom: 10px">
+                                  Nuova richiesta da
+                                  ${process.env.NEXT_PUBLIC_HOST}
+                                </h2>
+                                <div class="form-container" id="form-data">
+                                  ${htmlData}
+                                </div>
+
+                                <div class="form-container">
+                                  <h3 class="form-heading">Pagina di contatto</h3>
+                                  <a class="form-answer" href="${location}"
+                                    >${title}</a
+                                  >
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                style="
+                                  text-align: center;
+                                  padding-left: 15px;
+                                  padding-right: 15px;
+                                "
+                              >
+                                <p style="font-size: 12px; padding: 10px 0">
+                                  Questo è un messaggio automatico. Se hai problemi
+                                  a visualizzare il messaggio contattami!
+                                </p>
+
+                                <p style="font-size: 12px; font-weight: bold">
+                                  Talesign di Oliviero Taleghani
+                                </p>
+                                <p style="font-size: 12px">
+                                  Via di Grignano, 20, 50065
+                                </p>
+                                <p style="font-size: 12px">Pontassieve, Firenze</p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+    `,
+  };
+};
+
+export async function formNotification(msg: any, location: any, title: any) {
+  try {
+    await transporter.sendMail({
+      ...mailOptions,
+      subject: `Nuova richiesta da ${process.env.NEXT_PUBLIC_HOST}`,
+      ...generateEmailContent(msg, location, title),
+    });
+    return 200;
+  } catch (error) {
+    console.log(error);
+    return 400;
+  }
+}
