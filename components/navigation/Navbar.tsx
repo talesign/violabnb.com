@@ -30,6 +30,7 @@ export default function Navbar() {
       <nav className="container text-sm grid grid-cols-2 items-center relative !py-4 xl:!py-0 px-6">
         <Link href="/" className="">
           <Image
+            unoptimized
             src="/images/violabnb-logo.avif"
             width={100}
             height={50}
@@ -38,6 +39,7 @@ export default function Navbar() {
           ></Image>
         </Link>
         <Image
+          unoptimized
           onClick={openNavbar}
           src="/images/hamburger-close.svg"
           width={25}
@@ -50,6 +52,7 @@ export default function Navbar() {
           className="hidden xl:block justify-self-end col-span-2 xl:col-span-1 px-6 xl:px-0 py-4 xl:py-0 bg-white w-full xl:w-auto h-screen xl:h-auto absolute xl:static top-0 left-0"
         >
           <Image
+            unoptimized
             onClick={closeNavbar}
             src="/images/hamburger-open.svg"
             width={25}
@@ -92,6 +95,7 @@ export default function Navbar() {
               <li key={"navbar_social" + index}>
                 <Link href={social.link}>
                   <Image
+                    unoptimized
                     src={social.icon}
                     width={25}
                     height={25}

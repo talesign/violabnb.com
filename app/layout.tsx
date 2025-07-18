@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Cookies from "@/components/defaults/Cookies";
-import Script from "next/script";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
-import { Partytown } from "@builder.io/partytown/react";
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://acme.com"),

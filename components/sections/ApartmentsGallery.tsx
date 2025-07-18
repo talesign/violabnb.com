@@ -12,10 +12,9 @@ export default function ApartentsGallery(props: ApartmentsGalleryProps) {
         {props?.gallery?.map((image_id: string, index: number) => (
           <>
             <Image
+              unoptimized
               key={image_id + index}
-              src={
-                "/content/apartments/" + props.id + "/" + image_id
-              }
+              src={"/content/apartments/" + props.id + "/" + image_id}
               width="500"
               height="500"
               alt="test"

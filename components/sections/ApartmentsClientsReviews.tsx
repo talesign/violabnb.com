@@ -24,6 +24,7 @@ function Review(props: ReviewProps) {
         >
           <header className="p-6 flex gap-4 items-center content-start">
             <Image
+              unoptimized
               src={props?.author_image}
               height={50}
               width={50}

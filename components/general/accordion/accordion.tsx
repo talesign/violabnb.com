@@ -22,6 +22,7 @@ export default function Accordion(props: AccordionProps) {
       >
         <div className="text-xl">{props.header}</div>
         <Image
+          unoptimized
           src="/images/arrow-down.svg"
           width="12"
           height="12"

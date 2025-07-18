@@ -17,10 +17,8 @@ export default function ServiceListingExt(props: {
           >
             <div className="flex flex-col justify-between min-h-[8rem]">
               <Image
-                src={
-                  "/content/services/" +
-                  item?.icon
-                }
+                unoptimized
+                src={"/content/services/" + item?.icon}
                 width="25"
                 height="25"
                 alt="test"

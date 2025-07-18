@@ -16,8 +16,12 @@ export default function ApartmentsListing(props: {
             >
               <Link href={"/appartamenti/" + item?.slug} className=" block">
                 <Image
+                  unoptimized
                   src={
-                    "/content/apartments/" + item.id + "/" + item?.featured_image
+                    "/content/apartments/" +
+                    item.id +
+                    "/" +
+                    item?.featured_image
                   }
                   width="500"
                   height="500"

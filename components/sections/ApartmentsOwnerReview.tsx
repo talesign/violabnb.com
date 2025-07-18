@@ -7,7 +7,7 @@ type ApartmentsOwnerReviewProps = {
 };
 
 export default function ApartmentsOwnerReview(
-  props: ApartmentsOwnerReviewProps
+  props: ApartmentsOwnerReviewProps,
 ) {
   return (
     <section className="container !max-w-6xl !py-24">
@@ -16,6 +16,7 @@ export default function ApartmentsOwnerReview(
         <p className=" text-xl italic">{props?.owner_review}</p>
         <div className="flex gap-4 items-center">
           <Image
+            unoptimized
             src={
               "https://" +
               process.env.NEXT_PUBLIC_PB_HOST +

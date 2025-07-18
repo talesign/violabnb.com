@@ -13,9 +13,8 @@ export default function HeroServices(props: HeroServicesProps) {
     <header className="py-12" style={{ background: `${props?.color}` }}>
       <div className="container !max-w-6xl flex flex-col gap-6">
         <Image
-          src={
-            "/content/services/" + props?.icon
-          }
+          unoptimized
+          src={"/content/services/" + props?.icon}
           width="25"
           height="25"
           alt={props.title}

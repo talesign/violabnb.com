@@ -16,6 +16,7 @@ export default function OwnersAdvantages(props: OwnersAdvantagesProps) {
     <section className="container !max-w-6xl !py-16">
       <h2 className="text-center">{props?.title}</h2>
       <Image
+        unoptimized
         src={props?.image}
         width="1152"
         height="500"

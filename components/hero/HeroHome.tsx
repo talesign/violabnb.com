@@ -10,6 +10,7 @@ export default function HeroHome() {
           </h1>
         </div>
         <Image
+          unoptimized
           src="/images/viola-ricci-property-manager-firenze.avif"
           width="1920"
           height="1080"

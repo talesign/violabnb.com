@@ -18,7 +18,8 @@ export default function ServicesBodycopy(props: ServicesBodycopyProps) {
     <section className="container flex flex-col xl:flex-row flex-grow gap-16 !max-w-6xl my-12">
       <div className="bodycopy max-w-prose">
         <Image
-          src={ "/content/services/" + props?.featured_image }
+          unoptimized
+          src={"/content/services/" + props?.featured_image}
           width="800"
           height="600"
           alt="test"
@@ -36,7 +37,8 @@ export default function ServicesBodycopy(props: ServicesBodycopyProps) {
 
       <aside className="p-6 rounded-lg shadow self-start sticky top-6 w-full">
         <Image
-          src={ "/content/services/" + props?.icon }
+          unoptimized
+          src={"/content/services/" + props?.icon}
           width="25"
           height="25"
           alt="test"

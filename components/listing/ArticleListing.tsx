@@ -13,10 +13,8 @@ export default function ArticleListing(props: { data: ArticlesCollection[] }) {
         >
           <Link href={"/articoli/" + item?.slug} className="">
             <Image
-              src={
-                "/content/articles/" +
-                item?.featured_image
-              }
+              unoptimized
+              src={"/content/articles/" + item?.featured_image}
               width="500"
               height="500"
               alt="test"

@@ -15,6 +15,7 @@ export default function HeroArticles(props: HeroArticlesProps) {
         <h1 className="text-4xl pt-8">{props?.title}</h1>
         <div className="flex gap-4 py-8">
           <Image
+            unoptimized
             src="/images/viola-ricci.avif"
             width="100"
             height="100"

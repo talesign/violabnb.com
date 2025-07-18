@@ -24,6 +24,7 @@ export default function ShareOnSocials() {
           title="Condividi su Facebook"
         >
           <Image
+            unoptimized
             src="/images/facebook_logo.webp"
             width="50"
             height="50"
@@ -41,6 +42,7 @@ export default function ShareOnSocials() {
           title="Condividi su X"
         >
           <Image
+            unoptimized
             src="/images/twitter-x_logo.webp"
             width="50"
             height="50"
@@ -58,6 +60,7 @@ export default function ShareOnSocials() {
           title="Condividi su LinkedIn"
         >
           <Image
+            unoptimized
             src="/images/linkedin_logo.webp"
             width="50"
             height="50"

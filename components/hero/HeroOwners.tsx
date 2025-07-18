@@ -26,6 +26,7 @@ export default function HeroOwners(props: HeroOwnersProps) {
         />
       </div>
       <Image
+        unoptimized
         src={props?.image}
         width="800"
         height="800"

@@ -13,10 +13,8 @@ export default function ArticlesBodycopy(props: ArticlesBodycopyProps) {
     <>
       <section className="container !max-w-prose">
         <Image
-          src={
-            "/content/articles/" +
-            props?.featured_image
-          }
+          unoptimized
+          src={"/content/articles/" + props?.featured_image}
           width="1920"
           height="1080"
           alt="test"
@@ -31,6 +29,7 @@ export default function ArticlesBodycopy(props: ArticlesBodycopyProps) {
         <div className="container !max-w-prose">
           <div className=" gap-4 py-8">
             <Image
+              unoptimized
               src="/images/viola-ricci.avif"
               width="100"
               height="100"

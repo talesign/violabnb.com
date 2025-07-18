@@ -15,6 +15,7 @@ export default function FollowOnSocial() {
             title={social_item.title}
           >
             <Image
+              unoptimized
               src={social_item.icon}
               width="40"
               height="40"

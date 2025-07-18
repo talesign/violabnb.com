@@ -8,6 +8,7 @@ export default function DefaultCTA() {
       <div className="container !max-w-6xl">
         <div className="grid xl:grid-cols-2 gap-4 bg-white rounded-lg shadow">
           <Image
+            unoptimized
             src="/images/call-to-action-image.avif"
             width="500"
             height="500"

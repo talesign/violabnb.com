@@ -10,9 +10,8 @@ export default function ServicesParagraph(props: ServicesParagraphProps) {
   return (
     <section>
       <Image
-        src={
-          "/content/services/" + props?.featured_image
-        }
+        unoptimized
+        src={"/content/services/" + props?.featured_image}
         width="1920"
         height="600"
         alt="test"

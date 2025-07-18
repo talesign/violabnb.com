@@ -22,6 +22,7 @@ export default function AboutCollaborators(props: AboutCollaboratorsProps) {
             (collaborator: Collaborator, index: number) => (
               <article key={"collaborators" + index}>
                 <Image
+                  unoptimized
                   src={collaborator?.image}
                   width="500"
                   height="500"
@@ -33,7 +34,7 @@ export default function AboutCollaborators(props: AboutCollaboratorsProps) {
                 <p className="pb-2">{collaborator?.subtitle}</p>
                 <p className="text-sm">{collaborator?.description}</p>
               </article>
-            )
+            ),
           )}
         </div>
       </div>

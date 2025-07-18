@@ -14,9 +14,8 @@ export default function ServiceListing(props: { data: ServiceCollection[] }) {
             style={{ background: `${item?.color}` }}
           >
             <Image
-              src={
-                "/content/services/" + item?.icon
-              }
+              unoptimized
+              src={"/content/services/" + item?.icon}
               width="25"
               height="25"
               alt="test"

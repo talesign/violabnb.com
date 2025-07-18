@@ -10,6 +10,7 @@ export default function HeroAbout(props: HeroAboutProps) {
   return (
     <section className="">
       <Image
+        unoptimized
         src={props?.image_url}
         width="1920"
         height="1080"
