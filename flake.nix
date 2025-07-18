@@ -12,12 +12,13 @@
     in
     {
       devShells.${system}.default = pkgs.mkShell {
-        packages = [
-          pkgs.nodejs_24
-          pkgs.pnpm
-          pkgs.zsh
-          pkgs.typescript-language-server
-          pkgs.nodePackages.prettier
+        packages = with pkgs; [
+          nodejs_24
+          pnpm
+          go
+          zsh
+          typescript-language-server
+          nodePackages.prettier
         ];
         shellHook = ''
           echo "node_v24 + nix"
