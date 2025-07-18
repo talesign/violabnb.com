@@ -1,8 +1,8 @@
 [build]
 builder = "RAILPACK"
 
-[start]
-command = "go build -o server server.go && ./server -port $PORT"
+# [start]
+# command = "go build -o server server.go && ./server -port $PORT"
 
 [deploy]
 runtime = "V2"
