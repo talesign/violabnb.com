@@ -1,6 +1,5 @@
 [build]
 builder = "RAILPACK"
-buildCommand = "npm install && npm run build"
 
 [start]
 command = "go build -o server server.go && ./server -port $PORT"
