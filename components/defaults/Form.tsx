@@ -250,55 +250,52 @@ export default function Form() {
     },
   });
 
-    return (
+  return (
     <form
-className="flex flex-col gap-4 bg-white p-12 shadow rounded-xl"
+      className="flex flex-col gap-4 bg-white p-12 shadow rounded-xl"
       onSubmit={(e) => {
         e.preventDefault();
         form.handleSubmit();
       }}
     >
-        <form.AppField
-          name="name"
-          children={(field) => (
-            <field.TextField
-              label="Nome"
-              placeholder="Inserisci il tuo nome"
-            />
-          )}
-        />
+      <form.AppField
+        name="name"
+        children={(field) => (
+          <field.TextField label="Nome" placeholder="Inserisci il tuo nome" />
+        )}
+      />
 
-        <form.AppField
-          name="surname"
-          children={(field) => (
-            <field.TextField
-              label="Cognome"
-              placeholder="Inserisci il tuo cognome"
-            />
-          )}
-        />
-        <form.AppField
-          name="email"
-          children={(field) => (
-            <field.TextField
-              label="Email"
-              placeholder="La tua email..."
-            />
-          )}
-        />
-        <form.AppField
-          name="phone"
-          children={(field) => (
-            <field.TextField
-              label="Telefono"
-              placeholder="Inserisci il tuo telefono"
-            />
-          )}
-        />
+      <form.AppField
+        name="surname"
+        children={(field) => (
+          <field.TextField
+            label="Cognome"
+            placeholder="Inserisci il tuo cognome"
+          />
+        )}
+      />
+      <form.AppField
+        name="email"
+        children={(field) => (
+          <field.TextField label="Email" placeholder="La tua email..." />
+        )}
+      />
+      <form.AppField
+        name="phone"
+        children={(field) => (
+          <field.TextField
+            label="Telefono"
+            placeholder="Inserisci il tuo telefono"
+          />
+        )}
+      />
       <form.AppField
         name="body"
         children={(field) => (
-          <field.TextField label="Informationi" placeholder="Di cosa hai bisogno?" />
+          <field.TextField
+            label="Informationi"
+            placeholder="Di cosa hai bisogno?"
+          />
         )}
       />
       <form.AppField
@@ -317,10 +314,12 @@ className="flex flex-col gap-4 bg-white p-12 shadow rounded-xl"
       {success !== undefined && success === false && (
         <div className="bg-red-100 p-4 rounded-2xl flex flex-col text-center items-center gap-4">
           <X className="text-red-500 h-4 w-4" />
-          <span>Errore nell'invio del form. Utilizza un altro metodo per contattarmi.</span>
+          <span>
+            Errore nell'invio del form. Utilizza un altro metodo per
+            contattarmi.
+          </span>
         </div>
       )}
     </form>
   );
-
 }
